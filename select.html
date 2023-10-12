@@ -16,5 +16,15 @@
     </select>
     <button onclick="skrivMelding()">Vis valgt dyr</button>
     <p id="melding"></p>
+
+    <script>
+        function skrivMelding() {
+            let dyrSelect = document.getElementById("dyrSelect");
+            let valgtDyr = dyrSelect.options[dyrSelect.selectedIndex].text;
+            let melding = "Du valgte " + valgtDyr;
+            let pElement = document.getElementById("melding");
+            pElement.textContent = melding;
+        }
+    </script>
 </body>
 </html>
